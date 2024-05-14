@@ -1,0 +1,83 @@
+.main_wrapper {
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+}
+
+.main_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10vw;
+  padding-left: 0vw;
+  padding-right: 0vw;
+}
+
+.main_nav > header {
+  background: lightgrey;
+  text-align: center;
+  width: 25vw;
+}
+
+.main_con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 13vh;
+  padding-top: 6vh;
+}
+
+.dummy {
+  visibility: hidden;
+}
+.dummy > img {
+  width: 50vw;
+}
+
+.carousel {
+  width: 100vw;
+  height: 40vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: transparent;
+
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.slide {
+  margin-left: 5vw;
+  margin-right: 5vw;
+
+  width: 250px;
+  height: 250px;
+
+  background-color: white;
+
+  border: 1px solid black;
+  text-align: center;
+}
+
+.slide > img {
+  width: 200px;
+  height: 200px;
+}
+
+.main_btn_con {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 0vh;
+  padding-bottom: 15vh;
+}
+
+.main_btn_con > button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}

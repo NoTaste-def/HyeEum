@@ -1,0 +1,42 @@
+.main_wrapper {
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+}
+
+.main_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10vw;
+  padding-left: 0vw;
+  padding-right: 0vw;
+}
+
+.main_nav > header {
+  background: lightgrey;
+  text-align: center;
+  width: 25vw;
+}
+
+.main_con {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 13vh;
+  padding-top: 6vh;
+}
+
+.desc {
+  position: relative;
+  text-align: center;
+}
+
+.btnCon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

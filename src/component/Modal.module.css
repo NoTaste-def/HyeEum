@@ -1,0 +1,29 @@
+.background {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.wrapper {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 60vh;
+  overflow-y: auto;
+}
+
+.footer {
+  position: absolute;
+  top: 73%;
+  left: 70%;
+}
+
+/* .fade {
+  transition: all 0.5s ease;
+  display: none;
+} */
