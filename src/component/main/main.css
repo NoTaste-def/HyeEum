@@ -1,0 +1,28 @@
+body {
+    background-color: #282828;
+}
+
+.main_container {
+    width: 99vw;
+    height: 97vh;
+}
+
+.Typewriter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+    margin-left: 10%;
+    height: 60%;
+    color: white;
+    font-size: 15px;
+    font-family:'Times New Roman', Times, serif;
+    border: 1px solid black;
+    width: 80%;
+}
+
+.cliked {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
