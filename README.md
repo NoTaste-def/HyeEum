@@ -8,11 +8,15 @@ OpenAI(ChatGTP, DALL・E)及びPWAを活用したReactJS基盤のモバイルウ
 
 ### History
 
-#### Main
+###### 2024-04-03 : Planning a function that can be completed by the deadline. And Discussion about concept of service
 
 ###### 2024-04-30 : Created Repository
-###### 2024-05-
 
+###### 2024-05-01 : Discussing databases and APIs
+
+###### 2024-05-05 : Test Setting
+
+###### 2024-05
 
 
 
