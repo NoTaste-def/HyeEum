@@ -3,6 +3,7 @@
   width: 100vw;
   margin: 0px;
   padding: 0px;
+  background-color: var(--color-background);
 }
 
 .main_nav {
@@ -73,11 +74,19 @@
   flex-direction: row;
   justify-content: space-around;
   padding-top: 0vh;
-  padding-bottom: 15vh;
 }
 
-.main_btn_con > button {
+/* .main_btn_con > button {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+} */
+
+.static {
+  /* background-color: transparent; */
+  border: none;
+}
+.diary {
+  /* background-color: transparent; */
+  border: none;
 }

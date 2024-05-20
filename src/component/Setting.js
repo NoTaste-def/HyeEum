@@ -18,7 +18,7 @@ const Setting = () => {
 
   const navigate = useNavigate();
   const toMain = () => {
-    navigate("/");
+    navigate("/main");
   };
 
   useEffect(() => {

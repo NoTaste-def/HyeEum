@@ -1,0 +1,23 @@
+.mind_h1 {
+  color: wheat;
+  display: flex;
+  justify-content: center;
+}
+
+.barchart {
+  display: flex;
+  justify-content: center;
+  margin-right: 10%;
+}
+
+.recharts-legend-wrapper {
+  color: aliceblue;
+}
+
+.recharts-layer {
+  top: 100px;
+}
+
+.recharts-text-list {
+  top: 100px;
+}

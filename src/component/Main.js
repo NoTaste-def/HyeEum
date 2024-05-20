@@ -64,18 +64,30 @@ const Main = () => {
       ) : null}
       <footer className={style.main_btn_con}>
         <button
-          onClick={() => {
-            toStatistic();
-          }}
-        >
-          통계
-        </button>
-        <button
+          className={style.diary}
           onClick={() => {
             toDiary();
           }}
         >
-          일기
+          일기버튼
+          {/* <img
+            src={chair}
+            alt="일기 버튼"
+            style={{ width: "180px", height: "130px" }}
+          /> */}
+        </button>
+        <button
+          className={style.static}
+          onClick={() => {
+            toStatistic();
+          }}
+        >
+          통계버튼
+          {/* <img
+            src={bonfire}
+            alt="통계 버튼"
+            style={{ width: "150px", height: "150px" }}
+          /> */}
         </button>
       </footer>
     </div>

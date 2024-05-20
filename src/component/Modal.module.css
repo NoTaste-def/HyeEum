@@ -7,7 +7,9 @@
   height: 100vh;
 }
 .wrapper {
-  background-color: white;
+  color: white;
+
+  background-color: var(--color-modal);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -17,10 +19,25 @@
   overflow-y: auto;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
 .footer {
   position: absolute;
   top: 73%;
   left: 70%;
+}
+
+.modalImg {
+}
+
+.modalScript {
+  font-size: 1.3rem;
 }
 
 /* .fade {

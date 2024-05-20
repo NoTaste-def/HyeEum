@@ -3,6 +3,7 @@
   width: 100vw;
   margin: 0px;
   padding: 0px;
+  background-color: var(--color-background);
 }
 
 .main_nav {
@@ -27,6 +28,10 @@
   align-items: center;
   padding-bottom: 13vh;
   padding-top: 6vh;
+}
+
+.main_con > article {
+  color: white;
 }
 
 .desc {

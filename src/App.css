@@ -8,18 +8,9 @@ body {
 
 :root {
   --color-black: #000;
-  --color-white: #fff;
-  --color-accent: #03045e;
-  --color-bg: #caf0f8;
-  --color-bg-darker: #ade8f4;
-  --color-bg-sidebar: #fff;
-  --color-bg-nav-hover: #e8f8fb;
-  --color-bg-actived: #023e8a;
-  --color-border: #03045e;
-  --color-text: #03045e;
-  --color-text-actived: #fff;
-  --color-text-hover: #0096c7;
-  --color-badge: #fff;
+  --color-background: #282828;
+  --color-modal: #9d9d9d;
+  --color-input: floralwhite;
 }
 
 html.dark {

@@ -6,11 +6,11 @@
   width: 50px;
   height: 24px;
   border-radius: 30px;
-  background-color: rgb(233, 233, 234);
+  background-color: rgb(148, 148, 148);
 }
 
 .toggleChecked {
-  background-color: rgb(0, 200, 102);
+  background-color: rgba(0, 200, 103, 0.76);
   transition: 0.5s;
 }
 
