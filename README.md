@@ -8,9 +8,10 @@ OpenAI(ChatGTP, DALL・E)及びPWAを活用したReactJS基盤のモバイルウ
 
 ### History
 
-###### Main
+#### Main
 
-2024-04-30 Created Repository
+###### 2024-04-30 : Created Repository
+###### 2024-05-
 
 
 
