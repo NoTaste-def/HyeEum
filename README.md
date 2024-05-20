@@ -4,6 +4,7 @@ OpenAI(ChatGTP, DALL・E) 및 PWA를 활용한 ReactJS기반 모바일 웹 어�
 <br/>
 OpenAI(ChatGTP, DALL・E)及びPWAを活用したReactJS基盤のモバイルウェブアプリケーションです。
 <br/>
+ReactJS-based mobile web application utilizing OpenAI (ChatGTP, DALL·E) and PWA.
 <br/>
 
 ### History
