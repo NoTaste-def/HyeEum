@@ -16,7 +16,9 @@ OpenAI(ChatGTP, DALL・E)及びPWAを活用したReactJS基盤のモバイルウ
 
 ###### 2024-05-05 : Test Setting
 
-###### 2024-05
+###### 2024-05-14 : Configuring the Basic Steps of the Main & Settings Page
+
+###### 2024-05-20 : Configuring Introduction Pages, Main, Setting and Statistic Page. Also, partialy hooked up with APIs
 
 
 
