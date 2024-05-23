@@ -7,13 +7,16 @@ import Chat from "./component/Chat";
 import Setting from "./component/Setting";
 import Input from "./component/Input";
 import Firstload from "./component/Firstload";
-import Nonlogin from "./component/Nonlogin";
 import Statistic from "./component/Statistic";
+import LoadModal from "./component/LoadModal";
+import NickConfirmModal from "./component/NickConfirmModal";
 
 function App() {
   return (
     <>
       <Routes>
+        <Route path="/modal" element={<NickConfirmModal />} />
+        <Route path="/loader" element={<LoadModal />} />
         <Route path="/" element={<Firstload />} />
         <Route path="/input" element={<Input />} />
         <Route path="/static" element={<Statistic />} />

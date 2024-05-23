@@ -1,9 +1,8 @@
 .toggleContainer {
   position: relative;
   /* margin-top: 8rem; */
-  left: 8%;
   cursor: pointer;
-  width: 50px;
+  width: 100px;
   height: 24px;
   border-radius: 30px;
   background-color: rgb(148, 148, 148);
@@ -18,14 +17,21 @@
   position: absolute;
   top: 1px;
   left: 1px;
-  width: 22px;
+  width: 44px;
   height: 22px;
-  border-radius: 50%;
+  border-radius: 50px;
   background-color: rgb(255, 254, 255);
   transition: 0.5s;
 }
 
 .toggleCircle.toggleChecked {
-  left: 27px;
+  left: 55px;
   transition: 0.5s;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }

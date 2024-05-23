@@ -15,10 +15,10 @@ import style from "./Statistic.module.css";
 
 function Statistics() {
   const data = [
-    { name: "기쁨", value: 200 },
-    { name: "슬픔", value: 100 },
-    { name: "우울", value: 50 },
-    { name: "화남", value: 70 },
+    { name: "기쁨", value: 5 },
+    { name: "슬픔", value: 3 },
+    { name: "우울", value: 1 },
+    { name: "화남", value: 2 },
   ];
 
   return (
@@ -35,7 +35,6 @@ function Statistics() {
           fill="#8884d8"
           label={true}
         />
-
         <Tooltip />
       </PieChart>
       <div className={style.barchart}>

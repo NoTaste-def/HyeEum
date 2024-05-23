@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./Toggle.module.css";
+import style from "./Toggle.module.css";
 import { useDispatch } from "react-redux";
 import { SetIsOn } from "../store";
 
@@ -17,17 +17,19 @@ export const Toggle = () => {
   };
 
   return (
-    <div className={styles.flex}>
+    <div className={style.flex}>
       <div
-        className={`${styles.toggleContainer} ${
-          isOn ? styles.toggleChecked : ""
+        className={`${style.toggleContainer} ${
+          isOn ? style.toggleChecked : ""
         }`}
         onClick={toggleHandler}
       >
+        <div className={style.content}>
+          <span>경어</span>
+          <span>평어</span>
+        </div>
         <div
-          className={`${styles.toggleCircle} ${
-            isOn ? styles.toggleChecked : ""
-          }`}
+          className={`${style.toggleCircle} ${isOn ? style.toggleChecked : ""}`}
         />
       </div>
     </div>

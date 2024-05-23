@@ -1,5 +1,17 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: var(--color-background);
+  font-family: "Jua", sans-serif;
+  font-style: normal;
+}
 body {
   -ms-overflow-style: none;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -8,8 +20,15 @@ body {
 
 :root {
   --color-black: #000;
-  --color-background: #282828;
-  --color-modal: #9d9d9d;
+  --color-background: linear-gradient(
+    black,
+    #012a4a,
+    #013a63,
+    #01497c /* #014f86 */
+  );
+  --color-background2: linear-gradient(black, #012a4a);
+  --color-modal-shadow: rgb(200, 195, 123);
+  --color-modal-border: rgba(200, 195, 123, 0.5);
   --color-input: floralwhite;
 }
 
@@ -26,3 +45,13 @@ html.dark {
   --color-text-hover: #adb5bd;
   --color-badge: #495057;
 }
+
+/* .nanum-pen-script-regular {
+  font-family: "Nanum Pen Script", cursive;
+  font-style: normal;
+} */
+
+/* .jua-regular {
+  font-family: "Jua", sans-serif;
+  font-style: normal;
+} */

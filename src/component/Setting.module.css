@@ -1,47 +1,118 @@
-.main_wrapper {
-  height: 100vh;
-  width: 100vw;
+.mainWrapper {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
   margin: 0px;
   padding: 0px;
   background-color: var(--color-background);
 }
 
-.main_nav {
+.mainNav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 10vw;
+  align-items: center;
+  padding: 10%;
   padding-left: 0vw;
   padding-right: 0vw;
 }
 
-.main_nav > header {
-  background: lightgrey;
+.mainNav > header {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: floralwhite;
   text-align: center;
-  width: 25vw;
+  font-size: 1.4rem;
+  /* width: 25%; */
+  text-shadow: 1px 1px 10px var(--color-modal-shadow);
 }
 
-.main_con {
+.mainNav > button {
+  padding: 0;
+  margin: 0;
+  margin-left: 30%;
+  background: transparent;
+  border: none;
+}
+
+.mainCon {
+  flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 13vh;
-  padding-top: 6vh;
+  padding: 20%;
 }
 
-.main_con > article {
+.mainCon > article {
   color: white;
 }
 
-.desc {
-  position: relative;
-  text-align: center;
+.settingCon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  font-size: 1.3rem;
+}
+
+.toggleWrap,
+.nickWrap,
+.birthWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10%;
+}
+
+.nickWrap,
+.birthWrap {
+  flex-direction: column;
 }
 
 .btnCon {
+  flex: 2;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+.btnCon > button {
+  background: transparent;
+  border: none;
+}
+
+.input {
+  width: 100%;
+  color: var(--color-input);
+  font-size: 1.3rem;
+  text-align: center;
+  border: 1px solid var(--color-input);
+  border-top: none;
+  border-radius: 5px;
+  background-color: transparent;
+}
+.input:focus {
+  outline: none;
+  /* border: none;
+  border-bottom: 1px solid var(--color-input); */
+  animation: blink 1s infinite;
+}
+.input::placeholder {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 240, 0.3);
+}
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--color-input);
+  }
 }

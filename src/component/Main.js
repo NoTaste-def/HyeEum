@@ -1,12 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./Main.module.css";
 import { useNavigate } from "react-router-dom";
 import Modal from "./Modal";
+import { Player } from "@lordicon/react";
+
+let a = null;
+const BOOK = require("../assets/book.json");
+const CHART = require("../assets/chart.json");
+const GEAR = require("../assets/gear.json");
 
 const Main = () => {
   const navigate = useNavigate();
   let [arr, setArr] = useState([0, 1, 2, 3, 4, 5, 6]);
   const [isOpen, setIsOpen] = useState(false);
+
+  const bookRef = useRef(null);
+  const chartRef = useRef(null);
+  const gearRef = useRef(null);
+
+  const handleSetting = () => {
+    gearRef.current.playFromBeginning();
+  };
+
+  useEffect(() => {
+    bookRef.current.playFromBeginning();
+    chartRef.current.playFromBeginning();
+    gearRef.current.playFromBeginning();
+  }, []);
+
   const openModal = () => {
     setIsOpen(true);
   };
@@ -24,18 +45,28 @@ const Main = () => {
     navigate(`/diary`);
   };
   return (
-    <div className={style.main_wrapper}>
-      <nav className={style.main_nav}>
+    <div className={style.mainWrapper}>
+      <nav className={style.mainNav}>
         <header>HyeEum</header>
         <button
+          className={style.settingBtn}
           onClick={() => {
-            toSetting();
+            handleSetting();
+            a = setTimeout(() => {
+              toSetting();
+            }, 1080);
           }}
         >
-          ?
+          <Player
+            ref={gearRef}
+            size={30}
+            colorize="rgb(200, 195, 123)"
+            icon={GEAR}
+            state="hover-cog-2"
+          />
         </button>
       </nav>
-      <main className={style.main_con}>
+      <main className={style.mainCon}>
         <article className={style.carousel}>
           {arr.map((a, i) => {
             return (
@@ -62,19 +93,20 @@ const Main = () => {
           closeModal={closeModal}
         />
       ) : null}
-      <footer className={style.main_btn_con}>
+      <footer className={style.mainBtnCon}>
         <button
           className={style.diary}
           onClick={() => {
             toDiary();
           }}
         >
-          일기버튼
-          {/* <img
-            src={chair}
-            alt="일기 버튼"
-            style={{ width: "180px", height: "130px" }}
-          /> */}
+          <Player
+            ref={bookRef}
+            size={50}
+            colorize="rgb(200, 195, 123)"
+            icon={BOOK}
+          />
+          {/* 일기버튼 */}
         </button>
         <button
           className={style.static}
@@ -82,12 +114,14 @@ const Main = () => {
             toStatistic();
           }}
         >
-          통계버튼
-          {/* <img
-            src={bonfire}
-            alt="통계 버튼"
-            style={{ width: "150px", height: "150px" }}
-          /> */}
+          <Player
+            ref={chartRef}
+            size={50}
+            icon={CHART}
+            colorize="rgb(200, 195, 123)"
+            className={style.chartBtn}
+          />
+          {/* 통계버튼 */}
         </button>
       </footer>
     </div>

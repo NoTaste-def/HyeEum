@@ -1,32 +1,46 @@
+.wrapper {
+  overflow: auto;
+  height: 100%;
+  position: relative;
+}
 .interact {
   margin: 0;
   padding: 0;
-  height: 50vh;
-  width: 100vw;
+  width: 100%;
   color: var(--color-input);
 }
 .interact > section {
-  padding-top: 10vh;
-  padding-right: 10vw;
-  padding-left: 10vw;
+  margin-top: 30%;
+  padding: 10%;
   text-align: center;
   font-size: 1.3rem;
 }
+
 .footer {
-  height: 5vh;
-  width: 100vw;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  bottom: 0%;
 
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: flex-end;
 
   transition: all 0.5s ease;
 }
 .inputCon {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.inputCon > Button {
+  background: transparent;
+  border: none;
 }
 .input {
-  width: 90vw;
+  text-align: center;
+  width: 90%;
   border: none;
   background-color: var(--color-background);
   border-bottom: 1px solid var(--color-input);
@@ -34,12 +48,11 @@
   color: var(--color-input);
   font-size: 1.3rem;
 }
-
 .input:focus {
   outline: none;
   border: none;
   border-bottom: 1px solid var(--color-input);
-  animation: blink 1s infinite;
+  animation: blink 0.98s infinite;
 }
 @keyframes blink {
   0%,
@@ -48,17 +61,5 @@
   }
   50% {
     border-bottom-color: var(--color-input);
-  }
-}
-
-@media screen and (max-height: 852px) {
-  .footer {
-    height: 33vh;
-    width: 100vw;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
   }
 }

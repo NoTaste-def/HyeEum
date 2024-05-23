@@ -32,7 +32,7 @@ function Firstload() {
   return (
     <>
       <div className={style.main_container}>
-        <main className={style.writer}>
+        <main>
           <Typewriter
             options={{
               strings: [

@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "version": "1.0",
+  "short_name": "혜음",
+  "name": "HyeEum",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,8 +19,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
+
+  "start_url": "./",
+  "display": "fullscreen",
   "theme_color": "#000000",
   "background_color": "#ffffff"
 }

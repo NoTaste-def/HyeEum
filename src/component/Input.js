@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "./Input.module.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -6,10 +6,11 @@ import NickConfirmModal from "./NickConfirmModal";
 import Typewriter from "typewriter-effect";
 import axios from "axios";
 import LoadModal from "./LoadModal";
+import { Player } from "@lordicon/react";
 
+const CHAT = require("../assets/chat.json");
 const URL =
   "https://port-0-hyeeum-backend-9zxht12blqj9n2fu.sel4.cloudtype.app/";
-const LOAD = "...";
 
 const Input = () => {
   const [query, setQuery] = useState([]);
@@ -17,14 +18,13 @@ const Input = () => {
   const [rand, setRand] = useState([]);
   const [ans, setAns] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-
   const [res, setRes] = useState(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setCnt(cnt + 1);
-    PushQuery();
-  };
+  let qna = useSelector((state) => {
+    return state.qna;
+  });
+
+  const chatRef = useRef(null);
 
   const PushQuery = () => {
     // query 배열에 질문, 답 리스트 저장.
@@ -36,9 +36,14 @@ const Input = () => {
     setAns("");
   };
 
-  let qna = useSelector((state) => {
-    return state.qna;
-  });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setCnt(cnt + 1);
+    PushQuery();
+
+    // 제출시 애니메이션 재생
+    chatRef.current.playFromBeginning();
+  };
 
   useEffect(() => {
     // 첫 로드시 랜덤 숫자 배열 생성.
@@ -72,37 +77,40 @@ const Input = () => {
     }
   }, [cnt]);
 
+  useEffect(() => {
+    // 첫 로드시 아이콘 애니메이션 실행
+    chatRef.current.playFromBeginning();
+  }, []);
+
   return (
-    <>
+    <div className={style.wrapper}>
       <header className={style.interact}>
         <section>{rand ? qna[rand[cnt]] : null}</section>
       </header>
       <footer className={style.footer}>
-        <div className={style.inputCon}>
-          <form onSubmit={handleSubmit}>
-            <input
-              required
-              className={style.input}
-              value={ans}
-              onChange={(e) => {
-                // 입력 데이터 저장
-                setAns(e.target.value);
-              }}
-            />
-            <button className={style.button} type="submit">
-              {">"}
-            </button>
-          </form>
-        </div>
+        <form className={style.inputCon} onSubmit={handleSubmit}>
+          <input
+            required
+            className={style.input}
+            value={ans}
+            onChange={(e) => {
+              // 입력 데이터 저장
+              setAns(e.target.value);
+            }}
+          />
+          <button className={style.button} type="submit">
+            <Player ref={chatRef} size={30} icon={CHAT} />
+          </button>
+        </form>
       </footer>
       <Modal isLoading={isLoading} res={res} />
-      <button
+      {/* <button
         onClick={() => {
           console.log(rand);
           console.log(query);
         }}
-      ></button>
-    </>
+      /> */}
+    </div>
   );
 };
 

@@ -22,7 +22,7 @@ const Modal = ({ isOpen, closeModal }) => {
       <>
         <div className={style.background} onClick={closeModal}></div>
         <div className={style.wrapper}>
-          <nav>그 날의 기억...</nav>
+          <nav>그 날의 기억.</nav>
           <main className={style.main}>
             <article className={style.modalImg}>
               <img
@@ -42,10 +42,8 @@ const Modal = ({ isOpen, closeModal }) => {
               Q: ㅇㄴㄹㅇㄴㅁㅁㅇ <br /> A: ㄹㄴㅁㄹㅇㄹㅇㄴ <br />
             </section>
           </main>
+          <footer className={style.footer}>배경을 눌러 닫기</footer>
         </div>
-        {/* <footer className={style.footer}>
-          <button onClick={closeModal}>닫기</button>
-        </footer> */}
       </>
     );
   }
