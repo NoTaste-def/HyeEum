@@ -13,6 +13,7 @@ const MSG = "그림을 그리고 있어요";
 let a = null; // 타이머로 쓸 변수
 
 const Diary = () => {
+  const [polite, setPolite] = useState("");
   const [query, setQuery] = useState([]);
   const [input, setInput] = useState("");
   const [imageUrl, setImageUrl] = useState(null);
@@ -36,13 +37,24 @@ const Diary = () => {
   };
 
   useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("local_user"));
+    if (storedUser.polite === true) {
+      setPolite("경어");
+    } else {
+      setPolite("평어");
+    }
+  }, []);
+
+  useEffect(() => {
     // query 상태가 완전히 업데이트 된 이후 post 실행.
     // 이거 이렇게 안하면 query 상태 업데이트 전에 보내져서 원하는 결과 안나옴.
+    console.log(polite);
     if (pending) {
       axios
         .post(`${URL}question-generation`, {
           qna_string: query.join("\n"),
           alignment: user.alignment,
+          polite: polite,
         })
         .then((res) => {
           console.log(res.data);
@@ -69,6 +81,7 @@ const Diary = () => {
       const emoRes = await axios.post(`${URL}emotion-generation`, {
         qna_string: query.join("\n"),
         alignment: user.alignment,
+        polite: polite,
       });
 
       console.log(emoRes.data);

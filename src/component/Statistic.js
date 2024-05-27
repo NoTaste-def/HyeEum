@@ -130,13 +130,16 @@ function Statistics() {
         </div>
       </div>
 
-      <div className={style.gptComment}>
-        {statistic.gpt_comment
-          .replace(". ", ".\n")
-          .replace("! ", "!\n")
-          .replace("? ", "?\n")
-          .replace(", ", ",\n")}
-      </div>
+      {statistic.gpt_comment ? (
+        <div className={style.gptComment}>
+          {statistic.gpt_comment
+            .replace(". ", ".\n")
+            .replace("! ", "!\n")
+            .replace("? ", "?\n")
+            .replace(", ", ",\n")}
+        </div>
+      ) : null}
+
       <div
         className={style.toMain}
         onClick={() => {
