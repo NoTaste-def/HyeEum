@@ -8,6 +8,8 @@ body {
   background: var(--color-background);
   font-family: "Jua", sans-serif;
   font-style: normal;
+
+  white-space: pre-wrap;
 }
 body {
   -ms-overflow-style: none;

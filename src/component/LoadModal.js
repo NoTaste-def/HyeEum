@@ -3,7 +3,7 @@ import style from "./LoadModal.module.css";
 import lunar from "../assets/lunar.png";
 import cloud from "../assets/cloud.png";
 
-const LoadModal = () => {
+const LoadModal = ({ msg }) => {
   return (
     <div className={style.loader}>
       <div className={style.iconWrapper}>
@@ -11,7 +11,9 @@ const LoadModal = () => {
         <img className={style.cloud} src={cloud} />
       </div>
       <div className={style.msgWrapper}>
-        <span className={style.message}>이름을 짓고 있어요</span>
+        <span className={style.message}>
+          {msg ? msg : "이름을 짓고 있어요"}
+        </span>
       </div>
     </div>
   );

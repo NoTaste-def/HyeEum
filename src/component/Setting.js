@@ -8,6 +8,9 @@ import store from "../store";
 import { Player } from "@lordicon/react";
 
 let a = null;
+const URL =
+  "https://port-0-hyeeum-backend-9zxht12blqj9n2fu.sel4.cloudtype.app/";
+
 const FORMAT = "YYYY-MM-DD";
 const SUBMIT = require("../assets/submit.json");
 const CANCEL = require("../assets/cancel.json");
@@ -32,6 +35,7 @@ const Setting = () => {
   const cancelRef = useRef(null);
   const submitRef = useRef(null);
   const homeRef = useRef(null);
+  const localUser = JSON.parse(localStorage.getItem("local_user"));
 
   const handleSubmit = () => {
     submitRef.current.playFromBeginning();
@@ -139,7 +143,7 @@ const Setting = () => {
               value={birth}
               maxLength={10}
               onChange={handleChangeDate}
-              placeholder="YYYY-MM-DD"
+              placeholder={localUser.birth}
             />
           </section>
 
@@ -148,7 +152,7 @@ const Setting = () => {
             <input
               className={style.input}
               id="nick"
-              placeholder={user.user_name}
+              placeholder={localUser.user_name}
               onChange={(e) => {
                 let copy = { ...payload };
                 copy.user_name = e.target.value;
@@ -192,15 +196,15 @@ const Setting = () => {
             setPayload(copy);
 
             // patch 요청.
-            // axios
-            //   .patch("http://[IP Address]/users/[User Tag]", payload)
-            //   .then((res) => {
-            //     console.log(res.data);
-            //   })
-            //   .catch(() => {
-            //     alert("Failed to PATCH");
-            //   });
-            console.log(payload);
+            axios
+              .patch(`${URL}users/${localUser.user_tag}`, { payload })
+              .then(() => {
+                alert("수정 성공");
+              })
+              .catch(() => {
+                alert("Failed to PATCH");
+              });
+            // console.log(payload);
           }}
         >
           <Player

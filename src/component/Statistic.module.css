@@ -1,13 +1,19 @@
-.mind_h1 {
-  color: wheat;
+.wrapper {
+  height: 75vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
+
+  color: var(--color-input);
+}
+.title {
+  text-align: center;
 }
 
-.barchart {
+.charts {
   display: flex;
   justify-content: center;
-  margin-right: 10%;
+  align-items: center;
 }
 
 .recharts-legend-wrapper {
@@ -20,4 +26,45 @@
 
 .recharts-text-list {
   top: 100px;
+}
+
+.gptComment {
+  border: 1px solid var(--color-input);
+  border-radius: 10px;
+  padding: 8%;
+  margin: 5%;
+  text-align: center;
+  font-size: 1.1rem;
+
+  border: 1px solid var(--color-modal-border);
+  box-shadow: 1px 1px 20px -5px var(--color-modal-shadow);
+
+  animation: shadow-blink 1.5s ease infinite;
+}
+
+@keyframes shadow-blink {
+  0%,
+  100% {
+    box-shadow: 1px 1px 20px -5px var(--color-modal-shadow);
+  }
+  50% {
+    box-shadow: 1px 1px 20px -5px var(--color-modal-border);
+  }
+}
+
+.toMain {
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+  text-align: center;
+  animation: blink 0.9s infinite ease alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.3;
+  }
 }

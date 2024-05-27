@@ -24,9 +24,12 @@ function Firstload() {
   };
 
   const nextpage = () => {
-    toInput();
-    localStorage.setItem("boo", clickedVisible);
-    localStorage.getItem("boo", clickedVisible);
+    const flag = JSON.parse(localStorage.getItem("local_user"));
+    if (flag) {
+      navigate("/main");
+    } else {
+      toInput();
+    }
   };
 
   return (
@@ -37,9 +40,9 @@ function Firstload() {
             options={{
               strings: [
                 "오늘은 어땠나요?",
-                "오늘은 당신에게 무슨일이 있었나요?",
-                "당신의 이야기를 저에게 들려주세요",
-                "그 전에 당신에 대해 몇가지만 물어볼게요",
+                "오늘은 당신에게\n 무슨일이 있었나요?",
+                "당신의 이야기를\n 저에게 들려주세요",
+                "그 전에 당신에 대해\n몇가지만 물어볼게요",
               ],
               autoStart: true,
               loop: false,

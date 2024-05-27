@@ -3,14 +3,19 @@ import style from "./NickConfirmModal.module.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { updateAlign, updateBirth, updateName, updateToggle } from "../store";
+import axios from "axios";
 
+let a = null; // 타이머 담을 변수
 const FORMAT = "YYYY-MM-DD";
+const URL =
+  "https://port-0-hyeeum-backend-9zxht12blqj9n2fu.sel4.cloudtype.app/";
 
 const NickConfirmModal = ({ res }) => {
-  // const [nick, setNick] = useState(res.nickname[3]);
-  const [nick, setNick] = useState("hello");
+  const [nick, setNick] = useState(res.nickname[3]);
+  // const [nick, setNick] = useState("hello");
   const [birth, setBirth] = useState("");
   const [cnt, setCnt] = useState(0);
+  const [align, setAlign] = useState(res.alignment);
 
   const dispatch = useDispatch();
 
@@ -68,14 +73,32 @@ const NickConfirmModal = ({ res }) => {
     setBirth(cur);
   };
 
+  const createUser = async () => {
+    if (!user.birth && user.birth.length !== 10) {
+      alert("이대로 진행하시겠습니까?");
+      return;
+    }
+
+    const data = { ...user };
+
+    try {
+      const res = await axios.post(`${URL}users`, data);
+      localStorage.setItem("local_user", JSON.stringify(res.data));
+      toMain();
+    } catch (error) {
+      alert("POST Failed");
+      console.log(data);
+    }
+  };
+
   return (
     <>
       {cnt === 0 ? (
         <div className={style.nickCon}>
           <div className={style.background}></div>
           <div className={style.wrapper}>
-            {/* <span className={style.nickname}>[ {res.nickname[3]} ]</span> */}
-            <span className={style.nickname}>[ {nick} ]</span>
+            <span className={style.nickname}>[ {res.nickname[3]} ]</span>
+            {/* <span className={style.nickname}>[ {nick} ]</span> */}
             <span>
               이 닉네임이 마음에 드시나요?
               <br />
@@ -91,6 +114,8 @@ const NickConfirmModal = ({ res }) => {
               className={style.toNextBtn}
               onClick={() => {
                 setCnt(cnt + 1);
+                dispatch(updateName(nick));
+                dispatch(updateAlign(align));
               }}
             >
               다음으로
@@ -112,15 +137,8 @@ const NickConfirmModal = ({ res }) => {
             <button
               className={style.toNextBtn}
               onClick={() => {
-                if (!birth) {
-                  alert("생일을 입력해주세요!");
-                } else {
-                  dispatch(updateName(nick));
-                  dispatch(updateBirth(birth));
-                  dispatch(updateAlign(res.alignment));
-                  // axios로 보냄.
-                  toMain();
-                }
+                dispatch(updateBirth(birth));
+                createUser();
               }}
             >
               시작하기
