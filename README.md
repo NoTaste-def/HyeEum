@@ -8,6 +8,7 @@ ReactJS-based mobile web application utilizing OpenAI (ChatGTP, DALL·E) and PWA
 <br/>
 
 HyeEum은 멘탈 헬스케어 웹 어플리케이션입니다.
+<br/>
 HyeEum is mental health care web application
 
 ### [ History ]
