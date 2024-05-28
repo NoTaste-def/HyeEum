@@ -96,7 +96,7 @@ function Statistics() {
 
   return (
     <div className={style.wrapper}>
-      <h1 className={style.title}>통계</h1>
+      <h1 className={style.title}>감정 풍경</h1>
       <div className={style.statisticWrapper}>
         <div className={style.chartWrapper}>
           <div className={style.chartCon}>

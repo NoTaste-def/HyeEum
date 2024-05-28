@@ -37,17 +37,21 @@
   width: 30px;
   height: 30px;
 }
+.chartCon > div:last-of-type {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
 .aggroBar {
-  background-color: red;
+  background-color: rgb(197, 76, 74);
 }
 .happyBar {
-  background-color: rgb(255, 255, 0);
+  background-color: rgb(219, 226, 115);
 }
 .sadBar {
-  background-color: blue;
+  background-color: rgb(98, 95, 202);
 }
 .joyBar {
-  background-color: greenyellow;
+  background-color: rgb(138, 237, 161);
 }
 
 .chartLabel {
