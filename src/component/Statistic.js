@@ -123,42 +123,6 @@ function Statistics() {
             })}
             <span>{statistic.joy}</span>
           </div>
-          {/* <PieChart width={150} height={150}>
-          <Pie
-            dataKey="value"
-            isAnimationActive={false}
-            data={data}
-            // cx={100}
-            // cy={100}
-            outerRadius={30}
-            fill="rgb(200, 195, 123)"
-            label={true}
-          />
-          <Tooltip />
-        </PieChart>
-        <div className={style.barchart}>
-          <BarChart
-            width={100}
-            height={100}
-            data={data}
-            margin={{
-              top: 5,
-              right: 0,
-              left: -10,
-              bottom: 5,
-            }}
-            barSize={20}
-          >
-            <XAxis
-              dataKey="name"
-              scale="point"
-              padding={{ left: 10, right: 10 }}
-            />
-            <YAxis />
-            <Tooltip content={<CustomTooltip />} />
-            <Bar dataKey="value" fill="rgb(200, 195, 123)" label={false} />
-          </BarChart>
-        </div> */}
         </div>
         <div className={style.chartLabel}>
           <span>화남</span>
@@ -176,7 +140,7 @@ function Statistics() {
             .replace(", ", ",\n")}
         </div>
       ) : null}
-
+      <div className={style.gptComment}>gd</div>
       <div
         className={style.toMainBtn}
         onClick={() => {
