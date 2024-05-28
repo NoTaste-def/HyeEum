@@ -13,7 +13,7 @@ HyeEumはメンタルヘルスケアーの為のWebアプリケーションで�
 <br/>
 HyeEum is mental health care web application
 
-### [ History ]
+### [ History ] - Branch YK
 
 ###### 2024-04-03 : Planning a function that can be completed by the deadline. And Discussion about concept of service
 
