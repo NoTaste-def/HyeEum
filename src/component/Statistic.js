@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import {
-  PieChart,
-  Pie,
-  Tooltip,
-  BarChart,
-  XAxis,
-  YAxis,
-  Legend,
-  CartesianGrid,
-  Bar,
-  ResponsiveContainer,
-} from "recharts";
+// import {
+//   PieChart,
+//   Pie,
+//   Tooltip,
+//   BarChart,
+//   XAxis,
+//   YAxis,
+//   Legend,
+//   CartesianGrid,
+//   Bar,
+//   ResponsiveContainer,
+// } from "recharts";
 
 import style from "./Statistic.module.css";
 import { useNavigate, useParams } from "react-router-dom";
@@ -46,12 +46,18 @@ function Statistics() {
   if (!statistic) {
     return <LoadModal msg={MSG} />;
   }
-  const data = [
-    { name: "화남", value: statistic.aggro },
-    { name: "기쁨", value: statistic.happiness },
-    { name: "슬픔", value: statistic.sadness },
-    { name: "즐거움", value: statistic.joy },
-  ];
+
+  // const data = [
+  //   { name: "화남", value: statistic.aggro },
+  //   { name: "기쁨", value: statistic.happiness },
+  //   { name: "슬픔", value: statistic.sadness },
+  //   { name: "즐거움", value: statistic.joy },
+  // ];
+
+  const aggro = Array(statistic.aggro).fill(0);
+  const happiness = Array(statistic.happiness).fill(0);
+  const sadness = Array(statistic.sadness).fill(0);
+  const joy = Array(statistic.joy).fill(0);
 
   // const getIntroOfPage = (label) => {
   //   if (label === "Page A") {
@@ -75,24 +81,49 @@ function Statistics() {
   //   return "";
   // };
 
-  const CustomTooltip = ({ active, payload, label }) => {
-    if (active && payload && payload.length) {
-      return (
-        <div className="custom-tooltip">
-          <p className="label">{`${label} : ${payload[0].value}`}</p>
-          {/* <p className="intro">{getIntroOfPage(label)}</p> */}
-          {/* <p className="desc">Anything you want can be displayed here.</p> */}
-        </div>
-      );
-    }
+  // const CustomTooltip = ({ active, payload, label }) => {
+  //   if (active && payload && payload.length) {
+  //     return (
+  //       <div className="custom-tooltip">
+  //         <p className="label">{`${label} : ${payload[0].value}`}</p>
+  //         {/* <p className="intro">{getIntroOfPage(label)}</p> */}
+  //         {/* <p className="desc">Anything you want can be displayed here.</p> */}
+  //       </div>
+  //     );
+  //   }
+  //   return null;
+  // };
 
-    return null;
-  };
   return (
     <div className={style.wrapper}>
-      <h1 className={style.title}>기분 통계</h1>
-      <div className={style.charts}>
-        <PieChart width={150} height={150}>
+      <h1 className={style.title}>통계</h1>
+      <div className={style.statisticWrapper}>
+        <div className={style.chartWrapper}>
+          <div className={style.chartCon}>
+            {aggro.map((a, i) => {
+              return <div key={i} className={style.aggroBar} />;
+            })}
+            <span>{statistic.aggro}</span>
+          </div>
+          <div className={style.chartCon}>
+            {happiness.map((a, i) => {
+              return <div key={i} className={style.happyBar} />;
+            })}
+            <span>{statistic.happiness}</span>
+          </div>
+          <div className={style.chartCon}>
+            {sadness.map((a, i) => {
+              return <div key={i} className={style.sadBar} />;
+            })}
+            <span>{statistic.sadness}</span>
+          </div>
+          <div className={style.chartCon}>
+            {joy.map((a, i) => {
+              return <div key={i} className={style.joyBar} />;
+            })}
+            <span>{statistic.joy}</span>
+          </div>
+          {/* <PieChart width={150} height={150}>
           <Pie
             dataKey="value"
             isAnimationActive={false}
@@ -127,9 +158,15 @@ function Statistics() {
             <Tooltip content={<CustomTooltip />} />
             <Bar dataKey="value" fill="rgb(200, 195, 123)" label={false} />
           </BarChart>
+        </div> */}
+        </div>
+        <div className={style.chartLabel}>
+          <span>화남</span>
+          <span>기쁨</span>
+          <span>슬픔</span>
+          <span>즐거움</span>
         </div>
       </div>
-
       {statistic.gpt_comment ? (
         <div className={style.gptComment}>
           {statistic.gpt_comment
@@ -141,7 +178,7 @@ function Statistics() {
       ) : null}
 
       <div
-        className={style.toMain}
+        className={style.toMainBtn}
         onClick={() => {
           navigate("/main");
         }}

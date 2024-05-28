@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 
   color: var(--color-input);
 }
@@ -10,14 +11,59 @@
   text-align: center;
 }
 
-.charts {
+.statisticWrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  width: 250px;
+  height: 150px;
+}
+.chartWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.chartCon {
+  display: flex;
+  flex-direction: column-reverse;
+  color: var(--color-input);
+  text-align: center;
+  font-size: 1.3rem;
+}
+.chartCon > div {
+  /* width: 30px; */
+  width: 30px;
+  height: 30px;
+}
+.aggroBar {
+  background-color: red;
+}
+.happyBar {
+  background-color: rgb(255, 255, 0);
+}
+.sadBar {
+  background-color: blue;
+}
+.joyBar {
+  background-color: greenyellow;
 }
 
-.recharts-legend-wrapper {
-  color: aliceblue;
+.chartLabel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+}
+.chartLabel > span {
+  display: inline-block;
+  width: 40px;
+}
+
+/* .recharts-legend-wrapper {
+  color: rgb(101, 131, 157);
 }
 
 .recharts-layer {
@@ -26,7 +72,7 @@
 
 .recharts-text-list {
   top: 100px;
-}
+} */
 
 .gptComment {
   border: 1px solid var(--color-input);
@@ -52,7 +98,7 @@
   }
 }
 
-.toMain {
+.toMainBtn {
   display: flex;
   justify-content: center;
   padding: 10%;

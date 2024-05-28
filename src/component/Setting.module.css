@@ -16,8 +16,8 @@
   justify-content: space-around;
   align-items: center;
   padding: 10%;
-  padding-left: 0vw;
-  padding-right: 0vw;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .mainNav > header {
