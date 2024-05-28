@@ -1,0 +1,120 @@
+.wrapper {
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  color: var(--color-input);
+}
+.title {
+  text-align: center;
+}
+
+.statisticWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+  height: 150px;
+}
+.chartWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+.chartCon {
+  display: flex;
+  flex-direction: column-reverse;
+  color: var(--color-input);
+  text-align: center;
+  font-size: 1.3rem;
+}
+.chartCon > div {
+  /* width: 30px; */
+  width: 30px;
+  height: 30px;
+}
+.chartCon > div:last-of-type {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.aggroBar {
+  background-color: rgb(197, 76, 74);
+}
+.happyBar {
+  background-color: rgb(219, 226, 115);
+}
+.sadBar {
+  background-color: rgb(98, 95, 202);
+}
+.joyBar {
+  background-color: rgb(138, 237, 161);
+}
+
+.chartLabel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+}
+.chartLabel > span {
+  display: inline-block;
+  width: 40px;
+}
+
+/* .recharts-legend-wrapper {
+  color: rgb(101, 131, 157);
+}
+
+.recharts-layer {
+  top: 100px;
+}
+
+.recharts-text-list {
+  top: 100px;
+} */
+
+.gptComment {
+  border: 1px solid var(--color-input);
+  border-radius: 10px;
+  padding: 8%;
+  margin: 5%;
+  text-align: center;
+  font-size: 1.1rem;
+
+  border: 1px solid var(--color-modal-border);
+  box-shadow: 1px 1px 20px -5px var(--color-modal-shadow);
+
+  animation: shadow-blink 1.5s ease infinite;
+}
+
+@keyframes shadow-blink {
+  0%,
+  100% {
+    box-shadow: 1px 1px 20px -5px var(--color-modal-shadow);
+  }
+  50% {
+    box-shadow: 1px 1px 20px -5px var(--color-modal-border);
+  }
+}
+
+.toMainBtn {
+  display: flex;
+  justify-content: center;
+  padding: 10%;
+  text-align: center;
+  animation: blink 0.9s infinite ease alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
