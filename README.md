@@ -6,10 +6,7 @@ OpenAI(ChatGTP, DALL・E)及びPWAを活用したReactJS基盤のモバイルウ
 <br/>
 ReactJS-based mobile web application utilizing OpenAI (ChatGTP, DALL·E) and PWA.
 <br/>
-<br/>
-https://www.canva.com/design/DAGGbhw80f8/_AjXGy2L6NZJqOK1R_krLA/view?utm_content=DAGGbhw80f8&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel
-<br/>
-<br/>
+
 HyeEum은 멘탈 헬스케어 웹 어플리케이션입니다.
 <br/>
 HyeEumはメンタルヘルスケアーの為のWebアプリケーションです。
@@ -32,3 +29,10 @@ HyeEum is mental health care web application
 
 ###### 2024-05-28 : Prot. HyeEum is completion
 
+
+
+Presentation
+<br/>
+https://www.canva.com/design/DAGGbhw80f8/_AjXGy2L6NZJqOK1R_krLA/view?utm_content=DAGGbhw80f8&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel
+<br/>
+<br/>
