@@ -30,9 +30,8 @@ HyeEum is mental health care web application
 ###### 2024-05-28 : Prot. HyeEum is completion
 
 
-
-Presentation
+<br/>
+<br/>
+/* ### Presentation */
 <br/>
 https://www.canva.com/design/DAGGbhw80f8/_AjXGy2L6NZJqOK1R_krLA/view?utm_content=DAGGbhw80f8&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel
-<br/>
-<br/>
