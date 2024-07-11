@@ -4,7 +4,7 @@ OpenAI(ChatGTP, DALL・E) 및 PWA를 활용한 ReactJS기반 멘탈 헬스케어
 <br/>
   >日本語
 ><br/>
-  >OpenAI(ChatGPT, DALL・E)およびPWAを活用したReactJS基盤のメンタルヘルスケアのためのモバイルウェブアプリケーションです。
+  >OpenAI(ChatGPT, DALL・E)およびPWAを活用したReactJS基盤のメンタルヘルスケアのためのモバイルウェブアプリケーションです。 本プロジェクトではAOSパートを担当しました。
   ><br/>
   ><br/>
   >English
@@ -36,7 +36,7 @@ OpenAI(ChatGTP, DALL・E) 및 PWA를 활용한 ReactJS기반 멘탈 헬스케어
 ### Presentation Material.
 #### [Canva Link](https://www.canva.com/design/DAGGbhw80f8/_AjXGy2L6NZJqOK1R_krLA/view?utm_content=DAGGbhw80f8&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
 <br/>
-#### AOSパートを担当しました。
+
 
 
 
