@@ -33,10 +33,8 @@ OpenAI(ChatGTP, DALL・E) 및 PWA를 활용한 ReactJS기반 멘탈 헬스케어
 <br/>
 <br/>
 
-### Presentation Material.
+### [Presentation Material.](https://www.canva.com/design/DAGGbhw80f8/_AjXGy2L6NZJqOK1R_krLA/view?utm_content=DAGGbhw80f8&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
 >#### The demonstration video starts from page 33
-#### [Canva Link](https://www.canva.com/design/DAGGbhw80f8/_AjXGy2L6NZJqOK1R_krLA/view?utm_content=DAGGbhw80f8&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
-<br/>
 
 
 
