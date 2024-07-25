@@ -12,6 +12,13 @@ OpenAI(ChatGTP, DALL・E)를 활용한 ReactJS기반 멘탈 헬스케어 모바�
 > ReactJS-based mental health care mobile web application utilizing OpenAI (ChatGTP, DALL·E).
 > <br/>
 
+### [Presentation Material.](https://www.canva.com/design/DAGGbhw80f8/_AjXGy2L6NZJqOK1R_krLA/view?utm_content=DAGGbhw80f8&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
+
+> #### The demonstration video starts from page 33
+
+<br/>
+<br/>
+
 # 努力
 
 ## CSS
@@ -73,6 +80,27 @@ LocalStorage に関連するロジックをすべて削除する。
 また、ユーザーの情報は Redux を通じて管理し、ライブラリオブジェクトはサーバーからの応答を受け取るとすぐに useState 変数に格納して管理します。
 <br/>
 このような改善により問題を適切に解決し、不要な演算を削減することができた。
+<br/>
+<br/>
+
+## [ History ] - Branch YK
+
+###### 2024-04-03 : Planning a function that can be completed by the deadline. And Discussion about concept of service
+
+###### 2024-04-30 : Created Repository
+
+###### 2024-05-01 : Discussing databases and APIs
+
+###### 2024-05-05 : Test Setting
+
+###### 2024-05-14 : Configuring the Basic Steps of the Main & Settings Page
+
+###### 2024-05-20 : Configuring Introduction Pages, Main, Setting and Statistic Page. Also, partialy hooked up with APIs
+
+###### 2024-05-28 : Prot. HyeEum is completion
+
+<br/>
+<br/>
 <br/>
 <br/>
 
@@ -141,26 +169,3 @@ LocalStorage와 관련된 로직은 전부 삭제한다.
 다음과 같은 개선으로 문제를 적절히 해결함과 동시에, 불필요한 연산을 줄일 수 있었다.
 <br/>
 <br/>
-
-## [ History ] - Branch YK
-
-###### 2024-04-03 : Planning a function that can be completed by the deadline. And Discussion about concept of service
-
-###### 2024-04-30 : Created Repository
-
-###### 2024-05-01 : Discussing databases and APIs
-
-###### 2024-05-05 : Test Setting
-
-###### 2024-05-14 : Configuring the Basic Steps of the Main & Settings Page
-
-###### 2024-05-20 : Configuring Introduction Pages, Main, Setting and Statistic Page. Also, partialy hooked up with APIs
-
-###### 2024-05-28 : Prot. HyeEum is completion
-
-<br/>
-<br/>
-
-### [Presentation Material.](https://www.canva.com/design/DAGGbhw80f8/_AjXGy2L6NZJqOK1R_krLA/view?utm_content=DAGGbhw80f8&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel)
-
-> #### The demonstration video starts from page 33
