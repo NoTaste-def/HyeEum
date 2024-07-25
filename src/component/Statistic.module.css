@@ -30,6 +30,7 @@
 .chartCon {
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
   color: var(--color-input);
   text-align: center;
   font-size: 1.3rem;
@@ -43,6 +44,10 @@
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+.label {
+  margin: 10px;
+}
+
 .aggroBar {
   background-color: rgb(197, 76, 74);
 }
@@ -54,18 +59,6 @@
 }
 .joyBar {
   background-color: rgb(138, 237, 161);
-}
-
-.chartLabel {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  width: 100%;
-}
-.chartLabel > span {
-  display: inline-block;
-  width: 40px;
 }
 
 /* .recharts-legend-wrapper {

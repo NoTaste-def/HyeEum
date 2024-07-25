@@ -100,35 +100,33 @@ function Statistics() {
       <div className={style.statisticWrapper}>
         <div className={style.chartWrapper}>
           <div className={style.chartCon}>
+            <span className={style.label}>화남</span>
             {aggro.map((a, i) => {
               return <div key={i} className={style.aggroBar} />;
             })}
             <span>{statistic.aggro}</span>
           </div>
           <div className={style.chartCon}>
+            <span className={style.label}>기쁨</span>
             {happiness.map((a, i) => {
               return <div key={i} className={style.happyBar} />;
             })}
             <span>{statistic.happiness}</span>
           </div>
           <div className={style.chartCon}>
+            <span className={style.label}>슬픔</span>
             {sadness.map((a, i) => {
               return <div key={i} className={style.sadBar} />;
             })}
             <span>{statistic.sadness}</span>
           </div>
           <div className={style.chartCon}>
+            <span className={style.label}>즐거움</span>
             {joy.map((a, i) => {
               return <div key={i} className={style.joyBar} />;
             })}
             <span>{statistic.joy}</span>
           </div>
-        </div>
-        <div className={style.chartLabel}>
-          <span>화남</span>
-          <span>기쁨</span>
-          <span>슬픔</span>
-          <span>즐거움</span>
         </div>
       </div>
       {statistic.gpt_comment ? (
@@ -140,7 +138,7 @@ function Statistics() {
             .replace(", ", ",\n")}
         </div>
       ) : null}
-      <div className={style.gptComment}>gd</div>
+      {/* <div className={style.gptComment}>gd</div> */}
       <div
         className={style.toMainBtn}
         onClick={() => {

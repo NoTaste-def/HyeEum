@@ -37,23 +37,18 @@ const Main = () => {
     gearRef.current.playFromBeginning();
   };
 
-  useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem("local_user"));
-    const storedLib = JSON.parse(localStorage.getItem("library"));
-    if (storedLib && storedLib.length > 0) {
-      setBooks(storedLib[0].books);
-    }
-    setUser(storedUser);
-    setLib(storedLib);
-  }, []);
+  // useEffect(() => {
+  //   if (user) {
+  //     axios.get(`${URL}users/${user.id}`).then((res) => {
+  //       console.log(res.data);
+  //     });
+  //   }
+  // }, [user]);
 
   useEffect(() => {
-    if (user) {
-      axios.get(`${URL}users/${user.id}`).then((res) => {
-        console.log(res.data);
-      });
-    }
-  }, [user]);
+    const storedUser = JSON.parse(localStorage.getItem("local_user"));
+    setUser(storedUser);
+  }, []);
 
   useEffect(() => {
     // Library 전체 조회
@@ -63,12 +58,19 @@ const Main = () => {
         .then((res) => {
           console.log(res.data);
           localStorage.setItem("library", JSON.stringify(res.data));
+          setLib(res.data);
         })
         .catch((err) => {
           console.error("Err", err);
         });
     }
   }, [user]);
+
+  useEffect(() => {
+    if (lib && lib.length > 0) {
+      setBooks(lib[0].books);
+    }
+  }, [lib]);
 
   useEffect(() => {
     bookRef.current.playFromBeginning();

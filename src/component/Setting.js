@@ -199,10 +199,10 @@ const Setting = () => {
             axios
               .patch(`${URL}users/${localUser.user_tag}`, { payload })
               .then(() => {
-                alert("수정 성공");
+                // alert("수정 성공");
               })
               .catch(() => {
-                alert("Failed to PATCH");
+                // alert("Failed to PATCH");
               });
             // console.log(payload);
           }}
