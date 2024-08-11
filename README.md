@@ -52,6 +52,25 @@ Main.js の下部には.mainBtnCon が存在し、これは常に画面の下部
 ただし、sticky は親要素の下に余白が存在しなければ画面の下部に固定的に位置することができない。そのため、.mainBtnCon の上位要素である.mainCon の padding-bottom を 120%に設定した。
 <br/>
 <br/>
+++
+```
+<div id='wrapper'>
+  <div>
+    content
+  </div>
+</div>
+<footer></footer>
+```
+```
+#wrapper{
+  height : 100%;
+}
+footer{
+  position : relative;
+  transform : translateY(-100%);
+}
+```
+このようなコードにも解決することができた。
 
 ## React.js
 
