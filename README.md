@@ -12,7 +12,7 @@ OpenAI(ChatGTP, DALL・E)를 활용한 ReactJS기반 멘탈 헬스케어 모바�
 > ReactJS-based mental health care mobile web application utilizing OpenAI (ChatGTP, DALL·E).
 > <br/>
 
-### [Presentation Material.](https://www.canva.com/design/DAGTdaT902o/xKz0GYeaSswfHOQ2Uuj1OA/edit?utm_content=DAGTdaT902o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+### [Presentation Material.](https://www.canva.com/design/DAGTdaT902o/RVC152EPY208xIrE-iLaiQ/view?utm_content=DAGTdaT902o&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 
 > #### The demonstration video starts from page 33
 
