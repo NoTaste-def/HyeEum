@@ -12,9 +12,54 @@ OpenAI(ChatGTP, DALL・E)를 활용한 ReactJS기반 멘탈 헬스케어 모바�
 > ReactJS-based mental health care mobile web application utilizing OpenAI (ChatGTP, DALL·E).
 > <br/>
 
+<br/>
+
 ### [Presentation Material.](https://www.canva.com/design/DAGTdaT902o/RVC152EPY208xIrE-iLaiQ/view?utm_content=DAGTdaT902o&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 
 > #### The demonstration video starts from page 15
+
+<br/>
+<br/>
+
+<hr/>
+
+<h3>Background</h3>
+
+<p><strong>日記作成の中庸性:</strong> 研究によると、日記はストレスや不安を管理し、感情をコントロールし、自己反省の機会を提供します。しかし、現代人が日記を書く割合は非常に低いです。</p>
+
+<h4>問題点:</h4> 
+<ul> 
+  <li><strong>時間不足:</strong> 忙しい日常の中で日記を書く余裕がない。</li> 
+  <li><strong>習慣化の難しさ:</strong> 日記を継続的に書くことが難しい。</li> 
+  <li><strong>表現の負担:</strong> 自分の感情を文章に表すことに困難を感じる。</li> 
+</ul> 
+
+<h4>HyeEumのソリューション:</h4> 
+<ul>
+  <li><strong>対話型日記作成:</strong> ChatGPTを活用してユーザーに自然な対話体験を提供。</li> 
+  <li><strong>視覚的表現:</strong> DALL·E APIを通じて一日を画像で表現。</li> 
+  <li><strong>感情分析:</strong> ユーザーの感情を数値化・視覚化して精神的健康状態を把握。</li> 
+</ul> 
+
+<hr/>
+
+<h3>主要な技術的要件</h3> 
+<ul> 
+  <li><strong>対話型インターフェース:</strong> ChatGPT APIを活用して自然な対話フローを提供。</li> 
+  <li><strong>日記の要約と視覚化:</strong> DALL·E APIを通じて日記を画像で表現。</li> 
+  <li><strong>感情分析アルゴリズム:</strong> ユーザーの感情を分析し、統計を視覚化。</li> 
+  <li><strong>多様なデバイス対応:</strong> レスポンシブデザインによるアクセス性向上。</li> 
+</ul> 
+
+<h3>サマリー</h3> 
+<ul> 
+  <li><strong>対話型日記作成UI:</strong> Reactベースのユーザーフレンドリーなインターフェース。</li> 
+  <li><strong>日記の要約と視覚的表現:</strong> ChatGPTとDALL·E APIによって生成された日記の要約と画像。</li>
+  <li><strong>感情分析と統計:</strong> ユーザーの心理データを分析し、視覚化。</li> 
+  <li><strong>モバイル最適化:</strong> レスポンシブデザインを活用したアクセス性の強化。</li> 
+</ul>
+
+<hr/>
 
 <br/>
 <br/>
