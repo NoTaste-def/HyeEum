@@ -1,12 +1,13 @@
 # HyeEum
 
-OpenAI(ChatGTP, DALL・E)를 활용한 ReactJS기반 멘탈 헬스케어 모바일 웹 어플리케이션입니다.
+OpenAI(ChatGPT, DALL・E)を活用した ReactJS 基盤のメンタルヘルスケアのためのモバイルウェブアプリケーションです。 本プロジェクトでは AOS パートを担当しました。
+
 <br/>
 
-> 日本語
+> 한국어
 > <br/>
-> OpenAI(ChatGPT, DALL・E)を活用した ReactJS 基盤のメンタルヘルスケアのためのモバイルウェブアプリケーションです。 本プロジェクトでは AOS パートを担当しました。
-> <br/> ><br/>
+> OpenAI(ChatGTP, DALL・E)를 활용한 ReactJS기반 멘탈 헬스케어 모바일 웹 어플리케이션입니다.
+> <br/> <br/>
 > English
 > <br/>
 > ReactJS-based mental health care mobile web application utilizing OpenAI (ChatGTP, DALL·E).
